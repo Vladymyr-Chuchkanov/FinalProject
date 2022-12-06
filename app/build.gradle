@@ -1,0 +1,70 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.chuchkanov.finalproject'
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.chuchkanov.finalproject"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        degub{
+            debuggable true
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+    implementation 'commons-io:commons-io:2.6'
+
+    implementation 'com.googlecode.json-simple:json-simple:1.1'
+    implementation 'org.fbreader:book:1.0.0-rc01'
+    implementation 'org.fbreader:config_client:1.0.0-rc01'
+    implementation 'org.fbreader:config_provider:1.0.0-rc01'
+    implementation 'org.fbreader:filesystem:1.0.0-rc01'
+    implementation 'org.fbreader:fontentry:1.0.0-rc01'
+    implementation 'org.fbreader:format_interface:1.0.0-rc01'
+    implementation 'org.fbreader:image:1.0.0-rc01'
+    implementation 'org.fbreader:intent:1.0.0-rc01'
+    implementation 'org.fbreader:language:1.0.0-rc01'
+    implementation 'org.fbreader:loader:1.0.0-rc01'
+    implementation 'org.fbreader:options:1.0.0-rc01'
+    implementation 'org.fbreader:text_client:1.0.0-rc01'
+    implementation 'org.fbreader:text_provider:1.0.0-rc01'
+    implementation 'org.fbreader:text_util:1.0.0-rc01'
+    implementation 'org.fbreader:text_view:1.0.0-rc01'
+    implementation 'org.fbreader:toc:1.0.0-rc01'
+    implementation 'org.fbreader:util:1.0.0-rc01'
+    implementation 'org.fbreader:view:1.0.0-rc01'
+    implementation 'org.fbreader:vimgadgets:1.0.0-rc01'
+    implementation 'org.fbreader:zip-amse:1.0.0-rc01'
+    implementation project(':fbreader_extras')
+    implementation project(':fbreader_styles')
+    implementation project(':fbreader_text_extras')
+    implementation 'org.jsoup:jsoup:1.13.1'
+}
